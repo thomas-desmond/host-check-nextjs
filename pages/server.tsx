@@ -1,24 +1,20 @@
-import type { InferGetServerSidePropsType, GetServerSideProps } from 'next'
- 
-type Repo = {
-  name: string
-  stargazers_count: number
-}
- 
+import PokemonDisplay from '@/component/pokemonDisplay'
+import { Pokemon } from '@/types/pokemon'
+
 export const getServerSideProps = (async () => {
-  // Fetch data from external API
-  const res = await fetch('https://api.github.com/repos/vercel/next.js')
-  const repo: Repo = await res.json()
-  // Pass data to the page via props
-  return { props: { repo } }
-}) satisfies GetServerSideProps<{ repo: Repo }>
- 
-export default function Page({
-  repo,
-}: InferGetServerSidePropsType<typeof getServerSideProps>) {
-  return (
-    <main>
-      <p>{repo.stargazers_count}</p>
-    </main>
-  )
+    const res = await fetch(`https://pokeapi.co/api/v2/pokemon/6`)
+    const pokemon = await res.json()
+
+    return {
+        props: {
+            image: pokemon.sprites.other.home.front_default,
+            name: pokemon.name,
+        },
+    }
+})
+
+export default function Page(pokemon: Pokemon) {
+    return (
+        <PokemonDisplay pokemon={pokemon} />
+    )
 }

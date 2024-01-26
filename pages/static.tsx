@@ -1,24 +1,21 @@
-import type { InferGetStaticPropsType, GetStaticProps } from 'next'
+import PokemonDisplay from "@/component/pokemonDisplay"
+import { Pokemon } from "@/types/pokemon"
 
-type Repo = {
-    name: string
-    stargazers_count: number
+export async function getStaticProps() {
+    const res = await fetch(`https://pokeapi.co/api/v2/pokemon/4`)
+    const pokemon = await res.json()
+
+    return {
+        props: {
+            image: pokemon.sprites.other.home.front_default,
+            name: pokemon.name,
+        },
+    }
 }
 
-export const getStaticProps = (async (context) => {
-    const res = await fetch('https://api.github.com/repos/vercel/next.js')
-    const repo = await res.json()
-    return { props: { repo } }
-}) satisfies GetStaticProps<{
-    repo: Repo
-}>
 
-export default function Page({
-    repo,
-}: InferGetStaticPropsType<typeof getStaticProps>) {
+export default function Page(pokemon: Pokemon) {
     return (
-        <main>
-            <p>{repo.stargazers_count}</p>
-        </main>
+        <PokemonDisplay pokemon={pokemon} />
     )
 }

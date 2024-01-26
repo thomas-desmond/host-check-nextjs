@@ -1,9 +1,5 @@
-import { InferGetStaticPropsType } from "next"
-import Image from "next/image"
-
-type Pokemon = {
-    pokemonImage: string
-}
+import PokemonDisplay from "@/component/pokemonDisplay"
+import { Pokemon } from "@/types/pokemon"
 
 export async function getStaticProps() {
     //generate random number between 1 and 1000
@@ -15,7 +11,8 @@ export async function getStaticProps() {
 
     return {
         props: {
-            pokemonImage: pokemon.sprites.front_default,
+            image: pokemon.sprites.other.home.front_default,
+            name: pokemon.name,
         },
         // Next.js will attempt to re-generate the page:
         // - When a request comes in
@@ -25,11 +22,8 @@ export async function getStaticProps() {
 }
 
 
-export default function Page({ pokemonImage }: Pokemon) {
-    console.log(pokemonImage)
+export default function Page(pokemon: Pokemon) {
     return (
-        <main>
-            <Image src={pokemonImage} alt="Pokemon" width={150} height={150} />
-        </main>
+        <PokemonDisplay pokemon={pokemon} />
     )
 }
