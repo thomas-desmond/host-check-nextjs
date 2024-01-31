@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import Link from "next/link";
+import HomepageLink from "@/component/homepageLink";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,52 +17,10 @@ export default function Home() {
       </div>
 
       <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-          <Link
-            href="/static"
-            className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          >
-          <h2 className={`mb-3 text-xl font-semibold`}>
-            getStaticProps()
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Can a page be statically rendered (SSG)?
-          </p>
-        </Link>
-
-        <Link
-            href="/server"
-            className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          >
-          <h2 className={`mb-3 text-xl font-semibold break-words`}>
-            getServerSideProps()
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Can a page be server rendered (SSR)?
-          </p>
-        </Link>
-
-        <Link
-            href="/image-optimization"
-            className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          >
-          <h2 className={`mb-3 text-xl font-semibold break-words`}>
-            Image Optimization
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Are images using the Next/Image component optimized?
-          </p>
-        </Link>
-        <Link
-            href="/incremental-static-regeneration"
-            className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          >
-          <h2 className={`mb-3 text-xl font-semibold break-words`}>
-            Incremental Static Regeneration (ISR)
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Does Incremental Static Regeneration (ISR) work?
-          </p>
-        </Link>
+        <HomepageLink pageLink="static" pageTitle="getStaticProps()" pageDescription="Can a page be statically generated (SSG)?" />
+        <HomepageLink pageLink="server" pageTitle="getServerSideProps()" pageDescription="Can a page be server rendered (SSR)?" />
+        <HomepageLink pageLink="image-optimization" pageTitle="Image Optimization" pageDescription="Are images using the Next/Image component optimized?" />
+        <HomepageLink pageLink="incremental-static-regeneration" pageTitle="Incremental Static Regeneration (ISR)" pageDescription="Does Incremental Static Regeneration (ISR) work?" />
       </div>
     </main>
   );
