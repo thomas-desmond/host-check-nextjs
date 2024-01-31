@@ -1,6 +1,6 @@
 describe('getStaticProps() Support', () => {
   it('should navigate to the about page', () => {
-    cy.visit('http://localhost:3000/')
+    cy.visit(Cypress.env('url'))
  
     cy.get('#static').click()
     cy.url().should('include', '/static')
