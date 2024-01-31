@@ -1,4 +1,4 @@
-import PokemonDisplay from "@/component/pokemonDisplay"
+import PokemonDisplay from "@/components/pokemonDisplay"
 import { Pokemon } from "@/types/pokemon"
 
 export async function getStaticProps() {
