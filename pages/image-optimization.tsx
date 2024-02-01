@@ -1,28 +1,32 @@
 import Image from 'next/image'
 import { useEffect, useState } from 'react';
 
-let optimizedSizeInKb = 0;
-
 export default function Page() {
 
-    const [optimizedSizeInKb, setOptimizedSizeInKb] = useState(0);
+    const [optimizedSizeInKb, setOptimizedSizeInKb] = useState(null as number | null);
 
     useEffect(() => {
+        console.log('useEffect asdasfasfafsd');
         const imageElement = document.getElementById('image') as HTMLImageElement;
-        getFileSize(imageElement.src)
-            .then(sizeInfo => {
-                console.log(`File size:${sizeInfo.kilobytes} KB`);
-                setOptimizedSizeInKb(sizeInfo.kilobytes);
-            });
+        getFileSize(imageElement.src);
     }, []);
-
 
     return (
         <main>
-            <div>
-                <p className="text-2xl">Original Size: 154 kb</p>
-                <p className="text-2xl">Optimized Size: {optimizedSizeInKb.toFixed(2)} kb</p>
+            <div className="flex">
+                <p className="text-2xl">Original Size:</p>
+                <div id="original" className='text-2xl'>154</div>
+                <p className="text-2xl">kb</p>
             </div>
+
+            {optimizedSizeInKb !== null && (
+                <div className="flex">
+                    <p className="text-2xl">Optimized Size:</p>
+                    <div id="optimized" className='text-2xl'>{optimizedSizeInKb.toFixed(2)}</div>
+                    <p className="text-2xl">kb</p>
+                </div>
+            )}
+
             <Image
                 id="image"
                 src="/large-image.jpg"
@@ -36,32 +40,25 @@ export default function Page() {
             </p>
         </main>
     )
+
+
+    function getFileSize(url: string) {
+        fetch(url)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                return response.blob();
+            })
+            .then(blob => {
+                const fileSize = blob.size;
+                const fileSizeInKB = fileSize / 1024;
+                setOptimizedSizeInKb(fileSizeInKB);
+            })
+            .catch(error => {
+                console.error('Error fetching image:', error);
+                throw error;
+            });
+    }
 }
 
-function getFileSize(url: string): Promise<SizeInfo> {
-    console.log(url);
-    return fetch(url)
-        .then(response => {
-            const contentLengthHeader = response.headers.get('Content-Length');
-            if (contentLengthHeader) {
-                const fileSizeInBytes = parseInt(contentLengthHeader, 10);
-                const fileSizeInKB = fileSizeInBytes / 1024;
-
-                return {
-                    bytes: fileSizeInBytes,
-                    kilobytes: fileSizeInKB,
-                };
-            } else {
-                return Promise.reject('Content-Length header not found in the response.');
-            }
-        })
-        .catch(error => {
-            console.error('Error fetching image:', error);
-            throw error;
-        });
-}
-
-interface SizeInfo {
-    bytes: number;
-    kilobytes: number;
-}

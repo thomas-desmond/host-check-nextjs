@@ -7,6 +7,6 @@ export default defineConfig({
     },
   },
   env: {
-    url: "https://host-check-nextjs.vercel.app/",
+    url: "http://localhost:3000/",
   }
 });
