@@ -16,6 +16,9 @@ export async function getStaticProps() {
 
 export default function Page(pokemon: Pokemon) {
     return (
-        <PokemonDisplay pokemon={pokemon} />
+        <div className="h-full flex flex-col justify-center items-center">
+            <p className="text-5xl underline">Testing GetStaticProps()</p>
+            <PokemonDisplay pokemon={pokemon} />
+        </div>
     )
 }

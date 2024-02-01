@@ -20,7 +20,7 @@ export default function Home() {
         <HomepageLink pageLink="image-optimization" pageTitle="Image Optimization" pageDescription="Are images using the Next/Image component optimized?" />
         <HomepageLink pageLink="incremental-static-regeneration" pageTitle="Incremental Static Regeneration (ISR)" pageDescription="Does Incremental Static Regeneration (ISR) work?" />
         <HomepageLink pageLink="api-route" pageTitle="API Routes" pageDescription="Do API routes work?" />
-        <HomepageLink pageLink="middleware-test" pageTitle="Middleware Redirect" pageDescription="Should redirect to homepage with success url param" />
+        <HomepageLink pageLink="middleware" pageTitle="Middleware Redirect" pageDescription="Should redirect to homepage with success url param" />
       </div>
     </main>
   );
