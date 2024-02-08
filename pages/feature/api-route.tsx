@@ -1,10 +1,6 @@
 import PokemonDisplay from "@/components/pokemonDisplay"
 import { useEffect, useState } from "react";
 
-export const config = {
-	runtime: 'edge',
-};
-
 export default function Page() {
     const [pokemon, setPokemon] = useState({name: "", image: ""});
 
