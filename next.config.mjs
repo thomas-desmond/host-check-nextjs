@@ -5,6 +5,15 @@ const nextConfig = {
   images: {
     domains: ['raw.githubusercontent.com'],
   },
+  async redirects() {
+    return [
+      {
+        source: '/feature/redirect',
+        destination: '/feature/redirected',
+        permanent: true,
+      },
+    ]
+  },
 };
 
 export default nextConfig;
