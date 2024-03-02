@@ -23,6 +23,7 @@ export default function Home() {
         <HomepageLink id="middleware" pageLink="middleware" pageTitle="Middleware Redirect" pageDescription="Should redirect to homepage with success url param" />
         <HomepageLink id="dynamic-route" pageLink="dynamic-route/65" pageTitle="Dynamic Routes" pageDescription="Should handle generated a SSR Dynamic Route" />
         <HomepageLink id="redirect" pageLink="redirect" pageTitle="next.config.js Redirect" pageDescription="Should perform a 308 Redirect" />
+        <HomepageLink id="edge-runtime" pageLink="edge-function" pageTitle="Edge Runtime" pageDescription="Should execute API routes with Edge Runtime" />
       </div>
     </main>
   );
