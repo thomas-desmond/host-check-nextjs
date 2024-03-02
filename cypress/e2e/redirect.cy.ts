@@ -1,5 +1,5 @@
-describe('getServerSideProps() Support', () => {
-    it('should show Alakazam on the Dynamic Route', () => {
+describe('next.config.js Redirect Support', () => {
+    it('should redirect to URL /redirected', () => {
       cy.visit(Cypress.env('url'))
    
       cy.get('#redirect').click()
