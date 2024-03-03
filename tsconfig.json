@@ -16,6 +16,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "cypress/e2e/dynamic-routes.cy.js", "cypress/e2e/api-routes.cy.js", "cypress/e2e/i18n.cy.js", "cypress/e2e/edge-runtime.cy.js", "cypress/e2e/jss-image-optimization.cy.js", "cypress/e2e/redirect.cy.js"],
   "exclude": ["node_modules"]
 }
