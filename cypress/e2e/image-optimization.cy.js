@@ -4,11 +4,12 @@ describe('Image Optimization with Next/Image', () => {
 
         cy.get('#image-optimization').click()
         cy.get('#original').invoke('text').as('originalSize')
-        cy.get('#optimized').should('not.have.value', '0');
-        cy.get('#optimized').invoke('text').as('optimizedSize')
-        cy.get('@originalSize').then((originalSize) => {
-            cy.get('@optimizedSize').then((optimizedSize) => {
-                expect(parseInt(originalSize)).to.be.greaterThan(parseInt(optimizedSize))
+        cy.wait(300)
+        cy.get('#optimized').then(($optimizedSize) => {
+            const optimizedSize = parseInt($optimizedSize.text());
+            expect(optimizedSize).to.be.greaterThan(0);
+            cy.get('#original').then(($originalSize) => {
+                expect(parseInt($originalSize.text())).to.be.greaterThan(optimizedSize)
             })
         })
     })
