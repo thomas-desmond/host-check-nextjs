@@ -24,6 +24,7 @@ export default function Home() {
         <HomepageLink id="dynamic-route" pageLink="dynamic-route/65" pageTitle="Dynamic Routes" pageDescription="Should handle generated a SSR Dynamic Route" />
         <HomepageLink id="redirect" pageLink="redirect" pageTitle="next.config.js Redirect" pageDescription="Should perform a 308 Redirect" />
         <HomepageLink id="edge-runtime" pageLink="edge-function" pageTitle="Edge Runtime" pageDescription="Should execute API routes with Edge Runtime" />
+        <HomepageLink id="jss-image" pageLink="jss-image-optimization" pageTitle="JSS Image Optimization" pageDescription="JSS images using NextImage component should be optimized" />
       </div>
     </main>
   );
