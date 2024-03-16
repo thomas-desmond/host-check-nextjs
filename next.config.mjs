@@ -14,6 +14,14 @@ const nextConfig = {
       },
     ]
   },
+  async rewrites() {
+    return [
+      {
+        source: '/feature/rewrite',
+        destination: '/feature/rewritten',
+      },
+    ]
+  },
   i18n: {
     locales: ['en-US', 'fr'],
     defaultLocale: 'en-US',

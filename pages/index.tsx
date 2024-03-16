@@ -23,6 +23,7 @@ export default function Home() {
         <HomepageLink pageLink="middleware" pageTitle="Middleware Redirect" pageDescription="Should redirect to homepage with success url param" />
         <HomepageLink id="dynamic-route" pageLink="dynamic-route/65" pageTitle="Dynamic Routes" pageDescription="Should handle generated a SSR Dynamic Route" />
         <HomepageLink pageLink="redirect" pageTitle="next.config.js Redirect" pageDescription="Should perform a 308 Redirect" />
+        <HomepageLink pageLink="rewrite" pageTitle="next.config.js Rewrite" pageDescription="Should perform url rewrite" />
         <HomepageLink pageLink="edge-function" pageTitle="Edge Runtime" pageDescription="Should execute API routes with Edge Runtime" />
         <HomepageLink pageLink="i18n" pageTitle="Sub-Path Internationalization" pageDescription="Should navigate to the French version of the page" locale="fr" />
         <HomepageLink pageLink="jss-image-optimization" pageTitle="JSS Image Optimization" pageDescription="JSS images using NextImage component should be optimized" />
