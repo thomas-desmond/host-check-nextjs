@@ -4,7 +4,7 @@ describe('Image Optimization with Next/Image', () => {
 
         cy.get('#image-optimization').click()
         cy.get('#original').invoke('text').as('originalSize')
-        cy.wait(300)
+        cy.wait(1000)
         cy.get('#optimized').then(($optimizedSize) => {
             const optimizedSize = parseInt($optimizedSize.text());
             expect(optimizedSize).to.be.greaterThan(0);

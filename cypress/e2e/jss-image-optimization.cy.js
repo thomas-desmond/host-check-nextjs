@@ -3,7 +3,7 @@ describe('Sitecore JS Image Optimization with NextImage Component', () => {
         cy.visit(Cypress.env('url'));
 
         cy.get('#jss-image-optimization').click()
-        cy.wait(300)
+        cy.wait(1000)
         cy.get('#optimized').then(($optimizedSize) => {
             const optimizedSize = parseInt($optimizedSize.text());
             expect(optimizedSize).to.be.greaterThan(0);
