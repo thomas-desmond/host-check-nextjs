@@ -9,6 +9,7 @@ The following features of Next.js are tested:
 - Incremental Static Regeneration (ISR)
 - API Routes 
 - Middleware Redirects
+- Edge Runtime
 - Dynamic Routes
 - next.config.js Redirects
 - Sub-Path Internationalization
