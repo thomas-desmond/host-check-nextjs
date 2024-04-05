@@ -15,6 +15,12 @@ The following features of Next.js are tested:
 - Sub-Path Internationalization
 - Sitecore JSS Image Optimization
 
+### Tested Platforms
+
+- Vercel: https://youtu.be/ZlF_2Xhn5fM
+- Azure Static Web Apps
+    - Video: https://youtu.be/XS0Ihz267_I
+    - Blog: https://www.thetombomb.com/posts/azure-swa-nextjs-pages
 
 
 ### Automated Testing with Cypress
