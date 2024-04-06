@@ -1,7 +1,7 @@
 import PokemonDisplay from '@/components/pokemonDisplay'
 import { Pokemon } from '@/types/pokemon'
 
-export const runtime = 'edge';
+export const runtime = 'experimental-edge';
 
 export const getServerSideProps = (async () => {
     const res = await fetch(`https://pokeapi.co/api/v2/pokemon/143`)
