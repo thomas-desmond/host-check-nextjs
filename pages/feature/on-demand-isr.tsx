@@ -1,6 +1,8 @@
 import PokemonDisplay from "@/components/pokemonDisplay"
 import { Pokemon } from "@/types/pokemon"
 
+export const runtime = 'edge';
+
 export async function getStaticProps() {
     const randomNumber = Math.floor(Math.random() * 1000) + 1
     console.log(`https://pokeapi.co/api/v2/pokemon/${randomNumber}`)

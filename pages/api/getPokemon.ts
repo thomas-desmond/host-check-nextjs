@@ -1,6 +1,8 @@
 import { Pokemon } from "@/types/pokemon";
 import type { NextApiRequest, NextApiResponse } from "next";
 
+export const runtime = 'edge';
+
 export default async function handler(
     req: NextApiRequest,
     res: NextApiResponse<Pokemon>,

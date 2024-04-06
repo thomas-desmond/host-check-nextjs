@@ -1,6 +1,8 @@
 import PokemonDisplay from "@/components/pokemonDisplay"
 import { Pokemon } from "@/types/pokemon"
 
+export const runtime = 'edge';
+
 export async function getStaticProps() {
     //generate random number between 1 and 1000
     const randomNumber = Math.floor(Math.random() * 1000) + 1

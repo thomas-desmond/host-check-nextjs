@@ -2,6 +2,8 @@ import PokemonDisplay from "@/components/pokemonDisplay"
 import { Pokemon } from "@/types/pokemon"
 import { useRouter } from "next/router"
 
+export const runtime = 'edge';
+
 export const getServerSideProps = async ({ params }: { params: { page: string } }) => {
     const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${params.page}`)
     const pokemon = await res.json()
