@@ -7,6 +7,7 @@ The following features of Next.js are tested:
 - getServerSideProps()
 - Image Optimization
 - Incremental Static Regeneration (ISR)
+- On Demand ISR
 - API Routes 
 - Middleware Redirects
 - Edge Runtime
