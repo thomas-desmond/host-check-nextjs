@@ -9,6 +9,7 @@ describe('Incremental Static Regeneration Support', () => {
             const beforeFirstSlash = beforeISR.split('/')[0];
             cy.wait(3200);
             cy.reload();
+            cy.get('p').invoke('text').should('equal', beforeFirstSlash);
             cy.wait(1000);
             cy.reload();
             cy.get('p').invoke('text').should('not.equal', beforeFirstSlash);
