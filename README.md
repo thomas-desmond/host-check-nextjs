@@ -17,7 +17,8 @@ The following features of Next.js are tested:
 
 ### Tested Platforms
 
-- [Vercel Video](https://youtu.be/ZlF_2Xhn5fM)
+- Vercel
+    - [Video](https://youtu.be/ZlF_2Xhn5fM)
 - Azure Static Web Apps
     - [Video](https://youtu.be/XS0Ihz267_I)
     - [Article](https://www.thetombomb.com/posts/azure-swa-nextjs-pages)
