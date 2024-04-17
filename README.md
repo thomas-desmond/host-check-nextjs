@@ -26,6 +26,9 @@ The following features of Next.js are tested:
 - AWS Amplify
     - [Video](https://youtu.be/jQBvdLeKqSE)
     - [Article](https://www.thetombomb.com/posts/aws-amplify-nextjs-pages)
+- Cloudflare Pages
+    - [Video](https://youtu.be/F7PLcfzF-z0)
+    - [Article](https://www.thetombomb.com/posts/nextjs-pages-cloudflare-pages)
     
 
 
