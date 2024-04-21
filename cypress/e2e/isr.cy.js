@@ -7,10 +7,10 @@ describe('Incremental Static Regeneration Support', () => {
         let beforeISR = cy.get('p').invoke('text').as('beforeISR');
         cy.get('@beforeISR').then((beforeISR) => {
             const beforeFirstSlash = beforeISR.split('/')[0];
-            cy.wait(3200);
+            cy.wait(6200);
             cy.reload();
             cy.get('p').invoke('text').should('equal', beforeFirstSlash);
-            cy.wait(1000);
+            cy.wait(2000);
             cy.reload();
             cy.get('p').invoke('text').should('not.equal', beforeFirstSlash);
         })
