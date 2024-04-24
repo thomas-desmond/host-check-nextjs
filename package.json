@@ -9,9 +9,12 @@
     "lint": "next lint",
     "cypress:open": "cypress open"
   },
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "dependencies": {
-    "@sitecore-jss/sitecore-jss-nextjs": "^21.6.3",
-    "next": "^13.4.16",
+    "@sitecore-jss/sitecore-jss-nextjs": "^21.7.1",
+    "next": "^14.2.2",
     "react": "^18",
     "react-dom": "^18"
   },
