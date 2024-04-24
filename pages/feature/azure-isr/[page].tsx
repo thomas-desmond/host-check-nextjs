@@ -26,7 +26,7 @@ export const getStaticPaths = (async () => {
     console.log(time)
     return (
         <>
-        Time: {time.datetime}
+        Time: {time?.datetime}
         </>
     )
   }
