@@ -23,6 +23,8 @@ The following features of Next.js are tested:
 - Azure Static Web Apps
     - [Video](https://youtu.be/XS0Ihz267_I)
     - [Article](https://www.thetombomb.com/posts/azure-swa-nextjs-pages)
+- Azure App Services (Linux Node)
+    - [Video](https://youtu.be/ONQB4GjnShs)
 - AWS Amplify
     - [Video](https://youtu.be/jQBvdLeKqSE)
     - [Article](https://www.thetombomb.com/posts/aws-amplify-nextjs-pages)
