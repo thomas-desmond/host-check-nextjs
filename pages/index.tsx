@@ -28,6 +28,7 @@ export default function Home() {
         <HomepageLink pageLink="edge-function" pageTitle="Edge Runtime" pageDescription="Should execute API routes with Edge Runtime" />
         <HomepageLink pageLink="i18n" pageTitle="Sub-Path Internationalization" pageDescription="Should navigate to the French version of the page" locale="fr" />
         <HomepageLink pageLink="jss-image-optimization" pageTitle="JSS Image Optimization" pageDescription="JSS images using NextImage component should be optimized" />
+        <HomepageLink id="dynamic-route-isr" pageLink="azure-isr/time" pageTitle="Dynamic Routes ISR" pageDescription="Should handle generated a SSR Dynamic Route" />
       </div>
     </main>
   );
