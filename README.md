@@ -31,6 +31,9 @@ The following features of Next.js are tested:
 - Cloudflare Pages
     - [Video](https://youtu.be/F7PLcfzF-z0)
     - [Article](https://www.thetombomb.com/posts/nextjs-pages-cloudflare-pages)
+- Virtual Private Server (VPS)
+    - [Video](https://youtu.be/q241nOF246o)
+    - [Article](https://www.thetombomb.com/posts/nextjs-on-vps)
     
 
 
