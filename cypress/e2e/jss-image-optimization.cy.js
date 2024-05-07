@@ -1,4 +1,4 @@
-describe('Sitecore JS Image Optimization with NextImage Component', () => {
+describe('Sitecore JSS Image Optimization with NextImage Component', () => {
     it('should optimize images that use NextImage component', () => {
         cy.visit(Cypress.env('url'));
 
