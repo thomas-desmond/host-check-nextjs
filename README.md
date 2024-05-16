@@ -34,6 +34,8 @@ The following features of Next.js are tested:
 - Virtual Private Server (VPS)
     - [Video](https://youtu.be/q241nOF246o)
     - [Article](https://www.thetombomb.com/posts/nextjs-on-vps)
+- Netlify
+    - [Video](https://youtu.be/ItyUwNVT1jI)
     
 
 
