@@ -7,6 +7,6 @@ export default defineConfig({
     },
   },
   env: {
-    url: "http://localhost:3000",
+    url: "https://firebase-backend--nextjs-host-check.us-central1.hosted.app/",
   }
 });
