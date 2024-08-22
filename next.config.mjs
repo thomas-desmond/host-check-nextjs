@@ -3,7 +3,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['raw.githubusercontent.com', 'edge.sitecorecloud.io'],
+    domains: ['raw.githubusercontent.com', 'images.thetombomb.com'],
   },
   async redirects() {
     return [
